@@ -12,8 +12,10 @@ jobs:
     - name: Build the Website
       run: |
         cd documentation/website
-        npm install
-        npm run build
+        # npm install
+        # npm run build
+        yarn
+        yarn build
       id: build
     - name: Get output time
       run: echo "The time was ${{ steps.build.outputs.time }}"
